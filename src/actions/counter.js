@@ -1,13 +1,13 @@
 //.actions/counter.js
- //step 6
-export const increment = () => {
-    return {
-        type: 'INCREMENT'
-    }
-}
+//step 6
+export const addBase = () => {
+  return {
+    type: "ADDBASE"
+  };
+};
 
 export const decrement = () => {
-    return {
-        type: 'DECREMENT'
-    }
-}
+  return {
+    type: "DECREMENT"
+  };
+};
