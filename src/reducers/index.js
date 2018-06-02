@@ -1,9 +1,9 @@
 //  ./reducer/index.js
 
-import counter from './counterReducer'
+import addBaseReducer from "./addBaseReducer";
 
 export default {
-    counter
-}
+  addBaseReducer
+};
 
 //step 3
