@@ -12,11 +12,10 @@ class PizzaSauce extends PureComponent {
   }
 
   handleInputChange(event) {
-    //this.props.addSauce("test");
     this.props.addSauce(event.target.value);
 
-    const target = event.target;
-    const name = target.name;
+    // const target = event.target;
+    // const name = target.name;
   }
 
   render() {
@@ -24,39 +23,36 @@ class PizzaSauce extends PureComponent {
       <form>
         <label>
           <input
-            name="choseBase"
+            name="choseSauce"
             type="radio"
-            value="8,99"
+            value="0,5"
             onChange={this.handleInputChange}
-          />25cm NY Style € 8,99
+          />{" "}
+          White sauce
           <input
-            name="choseBase"
+            name="choseSauce"
             type="radio"
-            value="11,49"
+            value="0,5"
             onChange={this.handleInputChange}
-          />30cm NY Style € 11,49
+          />Red sauce
           <input
-            name="choseBase"
+            name="choseSauce"
             type="radio"
-            value="13,49"
+            value="1"
             onChange={this.handleInputChange}
-          />35cm NY Style € 13,49
+          />Double red sauce € 1,00
           <input
-            name="choseBase"
+            name="choseSauce"
             type="radio"
-            value="6,45"
+            value="1,5"
             onChange={this.handleInputChange}
-          />20cm NY Style € 6,45
+          />Mix it up € 1,50
         </label>
         <br />
       </form>
     );
   }
 }
-const mapStateToProps = state => {
-  return {
-    counter: state.counter
-  };
-};
 
+const mapStateToProps = state => {};
 export default connect(mapStateToProps, { addSauce })(PizzaSauce);

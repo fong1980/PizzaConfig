@@ -14,8 +14,8 @@ class PizzaBase extends PureComponent {
   handleInputChange(event) {
     this.props.addBase(event.target.value);
 
-    const target = event.target;
-    const name = target.name;
+    // const target = event.target;
+    // const name = target.name;
   }
 
   render() {
@@ -52,10 +52,6 @@ class PizzaBase extends PureComponent {
     );
   }
 }
-const mapStateToProps = state => {
-  return {
-    counter: state.counter
-  };
-};
 
+const mapStateToProps = state => {};
 export default connect(mapStateToProps, { addBase })(PizzaBase);

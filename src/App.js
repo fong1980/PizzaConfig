@@ -14,7 +14,7 @@ class App extends Component {
         <div>
           <h2>here comes the sun2</h2>
         </div>
-        {/* <PizzaBase /> */}
+        <PizzaBase />
         <PizzaSauce />
         <PizzaTopping />
       </div>
