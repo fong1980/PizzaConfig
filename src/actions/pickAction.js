@@ -1,5 +1,3 @@
-//.actions/counter.js
-//step 6
 export const addBase = input => {
   return {
     type: "ADDBASE",
@@ -7,20 +5,21 @@ export const addBase = input => {
   };
 };
 
-export const addSauce = () => {
+export const addSauce = input => {
   return {
-    type: "ADDSAUCE"
+    type: "ADDSAUCE",
+    input
   };
 };
 
-export const addTopping = () => {
-  return {
-    type: "ADDTOPPING"
-  };
-};
+// export const addTopping = () => {
+//   return {
+//     type: "ADDTOPPING"
+//   };
+// };
 
-export const addDrone = () => {
-  return {
-    type: "ADDDRONE"
-  };
-};
+// export const addDrone = () => {
+//   return {
+//     type: "ADDDRONE"
+//   };
+// };

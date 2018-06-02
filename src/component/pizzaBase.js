@@ -1,25 +1,17 @@
 import React, { PureComponent, Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-//import { pickBase } from "../actions/counter";
 import { addBase } from "../actions/pickAction";
-
-// this.props.increment();
-// console.log(this.counter, "test");
 
 class PizzaBase extends PureComponent {
   constructor(props) {
     super(props);
-    //this.state = {};
+    this.state = {};
 
     this.handleInputChange = this.handleInputChange.bind(this);
   }
 
   handleInputChange(event) {
-    //console.log(this.state.isGoing);
-    //console.log(this.props.pickBase(event.target.value));
-    //this.props.pickBase(event.target.value);
-    console.log(event.target.value);
     this.props.addBase(event.target.value);
 
     const target = event.target;
