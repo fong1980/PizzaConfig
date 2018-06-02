@@ -2,7 +2,7 @@ import React, { PureComponent, Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 //import { pickBase } from "../actions/counter";
-import { addBase } from "../actions/counter";
+import { addBase } from "../actions/pickAction";
 
 // this.props.increment();
 // console.log(this.counter, "test");
@@ -20,7 +20,7 @@ class PizzaBase extends PureComponent {
     //console.log(this.props.pickBase(event.target.value));
     //this.props.pickBase(event.target.value);
     console.log(event.target.value);
-    this.props.addBase();
+    this.props.addBase(event.target.value);
 
     const target = event.target;
     const name = target.name;

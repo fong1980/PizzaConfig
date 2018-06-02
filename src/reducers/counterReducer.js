@@ -1,9 +1,9 @@
 //./reducer/counterReaducer
 
-export default (state = 0, { type }) => {
-  switch (type) {
+export default (state = 0, action) => {
+  switch (action.type) {
     case "ADDBASE":
-      return state + 1;
+      return action.input;
     default:
       return state;
 
