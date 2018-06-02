@@ -2,6 +2,7 @@ import React, { PureComponent, Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 //import { pickBase } from "../actions/counter";
+import { increment } from "../actions/counter";
 
 // this.props.increment();
 // console.log(this.counter, "test");
@@ -19,6 +20,7 @@ class PizzaBase extends PureComponent {
     //console.log(this.props.pickBase(event.target.value));
     //this.props.pickBase(event.target.value);
     console.log(event.target.value);
+    this.props.increment();
 
     const target = event.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
@@ -65,4 +67,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, {})(PizzaBase);
+export default connect(mapStateToProps, { increment })(PizzaBase);
