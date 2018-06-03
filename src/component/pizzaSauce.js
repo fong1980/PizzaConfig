@@ -12,8 +12,7 @@ class PizzaSauce extends PureComponent {
   }
 
   handleInputChange(event) {
-    this.props.addSauce(event.target.value);
-    console.log(event.target.value + 2);
+    this.props.addSauce(Number(event.target.value));
 
     // const target = event.target;
     // const name = target.name;
@@ -28,14 +27,14 @@ class PizzaSauce extends PureComponent {
           <input
             name="choseSauce"
             type="radio"
-            value="0,5"
+            value="0.5"
             onChange={this.handleInputChange}
           />{" "}
           White sauce
           <input
             name="choseSauce"
             type="radio"
-            value="0,5"
+            value="0.5"
             onChange={this.handleInputChange}
           />Red sauce
           <input
@@ -47,7 +46,7 @@ class PizzaSauce extends PureComponent {
           <input
             name="choseSauce"
             type="radio"
-            value="1,5"
+            value="1.5"
             onChange={this.handleInputChange}
           />Mix it up € 1,50
         </label>

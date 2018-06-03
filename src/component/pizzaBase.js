@@ -11,7 +11,7 @@ class PizzaBase extends PureComponent {
   }
 
   handleInputChange(event) {
-    this.props.addBase(event.target.value);
+    this.props.addBase(Number(event.target.value));
 
     // const target = event.target;
     // const name = target.name;
@@ -25,25 +25,25 @@ class PizzaBase extends PureComponent {
           <input
             name="choseBase"
             type="radio"
-            value="8,99"
+            value="8.99"
             onChange={this.handleInputChange}
           />25cm NY Style € 8,99
           <input
             name="choseBase"
             type="radio"
-            value="11,49"
+            value="11.49"
             onChange={this.handleInputChange}
           />30cm NY Style € 11,49
           <input
             name="choseBase"
             type="radio"
-            value="13,49"
+            value="13.49"
             onChange={this.handleInputChange}
           />35cm NY Style € 13,49
           <input
             name="choseBase"
             type="radio"
-            value="6,45"
+            value="6.45"
             onChange={this.handleInputChange}
           />20cm NY Style € 6,45
         </label>
