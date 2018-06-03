@@ -19,8 +19,9 @@ export const addTopping = input => {
   };
 };
 
-// export const addDrone = () => {
-//   return {
-//     type: "ADDDRONE"
-//   };
-// };
+export const addDrone = input => {
+  return {
+    type: "ADDDRONE",
+    input
+  };
+};
