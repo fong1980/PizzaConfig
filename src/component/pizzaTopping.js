@@ -2,47 +2,54 @@ import React, { PureComponent } from "react";
 import { connect } from "react-redux";
 import { addTopping } from "../actions/pickAction";
 
+var disable = [];
 class PizzaTopping extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
       info: [],
-      disable: [0, 0, 0, 0, 0, 0],
+      disable: [], //[0, 0, 0, 0, 0, 0], //0 is aan
       checked: "",
 
       isGoing: true,
       numberOfGuests: 2,
       count: 0
     };
-
     this.handleInputChange = this.handleInputChange.bind(this);
   }
 
   handleInputChange(event) {
+    this.setState.disable = [0, 0, 0, 0, 1, 0];
     if (!this.state.info.includes(event.target.name)) {
       //nog niet in de array? dan toevoegen
-      console.log("bestaat nog niet");
+      //console.log("bestaat nog niet");
       this.state.info.push(event.target.name);
     } else {
-      // this.state.info
-      // var index=
-
-      var array = [2, 5, 9];
-      var index = array.indexOf(5);
+      //by uncheck, remove id from array
+      var index = this.state.info.indexOf(event.target.name);
       if (index > -1) {
-        array.splice(index, 1);
+        this.state.info.splice(index, 1);
       }
     }
+    //console.log(this.state.info.length, "buiten");
+    if (this.state.info.length > 3) {
+      (this.setState.disable = [1, 1, 1, 1, 1, 1]),
+        this.state.info.map(x => {
+          this.state.disable[x - 1] = 0;
+        });
 
-    // console.log(this.state.info.includes("2"), "  bestaat  ");
-    // console.log(this.state.info.length);
-    // console.log(this.state.info);
-    this.props.addTopping(Number(event.target.value));
+      console.log(this.state.disable, "ik ben van disable");
+    }
+
+    const toppingTotal = this.state.info.length * 0.5;
+
+    this.props.addTopping(Number(toppingTotal));
   }
 
   render() {
     return (
       <div className="Square">
+        {console.log(this.state.disable, "ik kom uit render")}
         <p> Chose max 3 topping </p>
         <input
           type="checkbox"
