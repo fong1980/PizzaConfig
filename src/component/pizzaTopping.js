@@ -12,8 +12,7 @@ class PizzaTopping extends PureComponent {
   }
 
   handleInputChange(event) {
-    this.props.addTopping(event.target.value);
-
+    //this.props.addTopping("test");
     // const target = event.target;
     // const name = target.name;
     // adf
@@ -29,36 +28,42 @@ class PizzaTopping extends PureComponent {
             type="checkbox"
             name="vehicle"
             value="0,5"
+            onChange={this.handleInputChange}
           />Pineapple
           <input
             class="choseTopping"
             type="checkbox"
             name="vehicle"
             value="0,5"
+            onChange={this.handleInputChange}
           />Corn
           <input
             class="choseTopping"
             type="checkbox"
             name="vehicle"
             value="0,5"
+            onChange={this.handleInputChange}
           />Olives (green)
           <input
             class="choseTopping"
             type="checkbox"
             name="vehicle"
             value="0,5"
+            onChange={this.handleInputChange}
           />Spinach
           <input
             class="choseTopping"
             type="checkbox"
             name="vehicle"
             value="0,5"
+            onChange={this.handleInputChange}
           />Cherry tomatoes
           <input
             class="choseTopping"
             type="checkbox"
             name="vehicle"
             value="0,5"
+            onChange={this.handleInputChange}
           />Chicken
         </div>
       </div>
