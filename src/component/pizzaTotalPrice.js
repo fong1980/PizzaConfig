@@ -1,14 +1,19 @@
-import React, { PureComponent } from "react";
+import React, { PureComponent, Component } from "react";
 import { connect } from "react-redux";
 import { addTopping } from "../actions/pickAction";
 
 class pizzaTotalprice extends PureComponent {
   componentDidMount() {
     console.log("GrandChild did mount.");
-    console.log(this.base, "teddst");
+    //console.log(this.prop.waarde, "teddst");
     //console.log(store.getState.addBasereducer, "test");
+    console.log(this.props.state, "teddst");
   }
-
+  calcTotal(input) {
+    return {
+      input
+    };
+  }
   render() {
     return (
       <form>
@@ -21,7 +26,9 @@ class pizzaTotalprice extends PureComponent {
   }
 }
 
-const mapStateToProps = state => ({
-  base: state
-});
+const mapStateToProps = state => {
+  return {
+    state
+  };
+};
 export default connect(mapStateToProps, {})(pizzaTotalprice);
