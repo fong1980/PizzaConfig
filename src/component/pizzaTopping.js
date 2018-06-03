@@ -11,9 +11,6 @@ class PizzaTopping extends PureComponent {
 
   handleInputChange(event) {
     this.props.addTopping(Number(event.target.value));
-    // const target = event.target;
-    // const name = target.name;
-    // adf
   }
 
   render() {

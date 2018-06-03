@@ -3,24 +3,22 @@ import { connect } from "react-redux";
 
 class pizzaTotalprice extends PureComponent {
   calcTotal() {
-    const tekst = "test";
+    const total = this.props.pizzaBase;
     return {
-      tekst
+      total
     };
   }
   render() {
+    const total =
+      (this.props.pizzaBase + this.props.pizzaSauce + this.props.pizzaTopping) *
+      this.props.pizzaDrone;
+
     return (
       <form>
         <label>
           <p />
           <p />
-          <strong>
-            total price:{" "}
-            {(this.props.pizzaBase +
-              this.props.pizzaSauce +
-              this.props.pizzaTopping) *
-              this.props.pizzaDrone}
-          </strong>
+          <strong>total price: {total}</strong>
         </label>
         <br />
       </form>
