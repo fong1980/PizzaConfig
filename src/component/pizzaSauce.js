@@ -1,6 +1,6 @@
-import React, { PureComponent, Component } from "react";
+import React, { PureComponent } from "react";
 import { connect } from "react-redux";
-import PropTypes from "prop-types";
+
 import { addSauce } from "../actions/pickAction";
 
 class PizzaSauce extends PureComponent {
@@ -13,6 +13,7 @@ class PizzaSauce extends PureComponent {
 
   handleInputChange(event) {
     this.props.addSauce(event.target.value);
+    console.log(event.target.value + 2);
 
     // const target = event.target;
     // const name = target.name;
@@ -23,6 +24,7 @@ class PizzaSauce extends PureComponent {
     return (
       <form>
         <label>
+          <p> Chose Sauce </p>
           <input
             name="choseSauce"
             type="radio"

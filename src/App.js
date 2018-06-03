@@ -1,8 +1,6 @@
 //app.js
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import logo from "./logo.svg";
-import "./App.css";
+
 import PizzaBase from "./component/pizzaBase";
 import PizzaSauce from "./component/pizzaSauce";
 import PizzaTopping from "./component/pizzaTopping";

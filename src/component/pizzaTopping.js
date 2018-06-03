@@ -1,18 +1,16 @@
-import React, { PureComponent, Component } from "react";
+import React, { PureComponent } from "react";
 import { connect } from "react-redux";
-import PropTypes from "prop-types";
 import { addTopping } from "../actions/pickAction";
 
 class PizzaTopping extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {};
-
     this.handleInputChange = this.handleInputChange.bind(this);
   }
 
   handleInputChange(event) {
-    //this.props.addTopping("test");
+    this.props.addTopping(event.target.value);
     // const target = event.target;
     // const name = target.name;
     // adf
@@ -21,51 +19,43 @@ class PizzaTopping extends PureComponent {
   render() {
     return (
       <div className="Square">
-        <p> chose Topping </p>
-        <div class="pricing-levels-3">
-          <input
-            class="choseTopping"
-            type="checkbox"
-            name="vehicle"
-            value="0,5"
-            onChange={this.handleInputChange}
-          />Pineapple
-          <input
-            class="choseTopping"
-            type="checkbox"
-            name="vehicle"
-            value="0,5"
-            onChange={this.handleInputChange}
-          />Corn
-          <input
-            class="choseTopping"
-            type="checkbox"
-            name="vehicle"
-            value="0,5"
-            onChange={this.handleInputChange}
-          />Olives (green)
-          <input
-            class="choseTopping"
-            type="checkbox"
-            name="vehicle"
-            value="0,5"
-            onChange={this.handleInputChange}
-          />Spinach
-          <input
-            class="choseTopping"
-            type="checkbox"
-            name="vehicle"
-            value="0,5"
-            onChange={this.handleInputChange}
-          />Cherry tomatoes
-          <input
-            class="choseTopping"
-            type="checkbox"
-            name="vehicle"
-            value="0,5"
-            onChange={this.handleInputChange}
-          />Chicken
-        </div>
+        <p> Chose Topping </p>
+        <input
+          type="checkbox"
+          name="vehicle"
+          value={0.5}
+          onChange={this.handleInputChange}
+        />Pineapple
+        <input
+          type="checkbox"
+          name="vehicle"
+          value="0,5"
+          onChange={this.handleInputChange}
+        />Corn
+        <input
+          type="checkbox"
+          name="vehicle"
+          value="0,5"
+          onChange={this.handleInputChange}
+        />Olives (green)
+        <input
+          type="checkbox"
+          name="vehicle"
+          value="0,5"
+          onChange={this.handleInputChange}
+        />Spinach
+        <input
+          type="checkbox"
+          name="vehicle"
+          value="0,5"
+          onChange={this.handleInputChange}
+        />Cherry tomatoes
+        <input
+          type="checkbox"
+          name="vehicle"
+          value="0,5"
+          onChange={this.handleInputChange}
+        />Chicken
       </div>
     );
   }

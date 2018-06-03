@@ -1,6 +1,5 @@
-import React, { PureComponent, Component } from "react";
+import React, { PureComponent } from "react";
 import { connect } from "react-redux";
-import PropTypes from "prop-types";
 import { addBase } from "../actions/pickAction";
 
 class PizzaBase extends PureComponent {
@@ -22,6 +21,7 @@ class PizzaBase extends PureComponent {
     return (
       <form>
         <label>
+          <p> Chose Base </p>
           <input
             name="choseBase"
             type="radio"

@@ -12,9 +12,10 @@ export const addSauce = input => {
   };
 };
 
-export const addTopping = () => {
+export const addTopping = input => {
   return {
-    type: "ADDTOPPING"
+    type: "ADDTOPPING",
+    input
   };
 };
 
