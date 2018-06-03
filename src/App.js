@@ -20,7 +20,6 @@ class App extends Component {
         <PizzaTopping />
         <PizzaDrone />
         <PizzaTotalPrice />
-        <Test />
       </div>
     );
   }
