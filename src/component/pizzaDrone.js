@@ -8,10 +8,8 @@ class PizzaDrone extends PureComponent {
     this.state = {
       isGoing: false
     };
-
     this.handleInputChange = this.handleInputChange.bind(this);
   }
-
   handleInputChange(event) {
     let discount = 1;
 
@@ -20,11 +18,7 @@ class PizzaDrone extends PureComponent {
     } else {
       discount = 1;
     }
-
-    //const value = target.type === "checkbox" ? target.checked : target.value;
     this.props.addDrone(Number(discount));
-    // const target = event.target;
-    // const name = target.name;
   }
 
   render() {

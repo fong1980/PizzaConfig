@@ -6,7 +6,6 @@ import PizzaSauce from "./component/pizzaSauce";
 import PizzaTopping from "./component/pizzaTopping";
 import PizzaDrone from "./component/pizzaDrone";
 import PizzaTotalPrice from "./component/pizzaTotalPrice";
-import Test from "./component/test";
 
 class App extends Component {
   render() {
@@ -19,7 +18,7 @@ class App extends Component {
         <PizzaSauce />
         <PizzaTopping />
         <PizzaDrone />
-        <PizzaTotalPrice />
+        <PizzaTotalPrice />f
       </div>
     );
   }

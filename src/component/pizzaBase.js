@@ -9,14 +9,12 @@ class PizzaBase extends PureComponent {
 
     this.handleInputChange = this.handleInputChange.bind(this);
   }
-
   handleInputChange(event) {
     this.props.addBase(Number(event.target.value));
 
     // const target = event.target;
     // const name = target.name;
   }
-
   render() {
     return (
       <form>
@@ -52,7 +50,6 @@ class PizzaBase extends PureComponent {
     );
   }
 }
-
 const mapStateToProps = state => {
   return state;
 };

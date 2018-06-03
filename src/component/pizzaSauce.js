@@ -10,13 +10,8 @@ class PizzaSauce extends PureComponent {
 
     this.handleInputChange = this.handleInputChange.bind(this);
   }
-
   handleInputChange(event) {
     this.props.addSauce(Number(event.target.value));
-
-    // const target = event.target;
-    // const name = target.name;
-    // adf
   }
 
   render() {
