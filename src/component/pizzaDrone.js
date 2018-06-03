@@ -13,10 +13,10 @@ class PizzaDrone extends PureComponent {
   }
 
   handleInputChange(event) {
-    let discount = 0;
+    let discount = 1;
 
     if (event.target.checked) {
-      discount = 0.9;
+      discount = 1.1;
     } else {
       discount = 1;
     }
@@ -30,6 +30,7 @@ class PizzaDrone extends PureComponent {
   render() {
     return (
       <form>
+        <br />
         <label>
           <input
             name="choseBase"
@@ -38,7 +39,7 @@ class PizzaDrone extends PureComponent {
             checked={this.state.inGoing}
             onChange={this.handleInputChange}
           />
-          <strong> For extra quick delivery by drone!.</strong>
+          <strong> For extra quick delivery by drone! +10%</strong>
         </label>
         <br />
       </form>

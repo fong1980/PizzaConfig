@@ -29,26 +29,26 @@ class PizzaSauce extends PureComponent {
             type="radio"
             value="0.5"
             onChange={this.handleInputChange}
-          />{" "}
-          White sauce
+          />
+          White sauce <br />
           <input
             name="choseSauce"
             type="radio"
             value="0.5"
             onChange={this.handleInputChange}
-          />Red sauce
+          />Red sauce<br />
           <input
             name="choseSauce"
             type="radio"
             value="1"
             onChange={this.handleInputChange}
-          />Double red sauce € 1,00
+          />Double red sauce € 1,00<br />
           <input
             name="choseSauce"
             type="radio"
             value="1.5"
             onChange={this.handleInputChange}
-          />Mix it up € 1,50
+          />Mix it up € 1,50<br />
         </label>
         <br />
       </form>

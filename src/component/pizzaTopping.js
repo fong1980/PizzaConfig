@@ -25,37 +25,37 @@ class PizzaTopping extends PureComponent {
           name="vehicle"
           value="0.5"
           onChange={this.handleInputChange}
-        />Pineapple
+        />Pineapple<br />
         <input
           type="checkbox"
           name="vehicle"
           value="0.5"
           onChange={this.handleInputChange}
-        />Corn
+        />Corn<br />
         <input
           type="checkbox"
           name="vehicle"
           value="0.5"
           onChange={this.handleInputChange}
-        />Olives (green)
+        />Olives (green)<br />
         <input
           type="checkbox"
           name="vehicle"
           value="0.5"
           onChange={this.handleInputChange}
-        />Spinach
+        />Spinach<br />
         <input
           type="checkbox"
           name="vehicle"
           value="0.5"
           onChange={this.handleInputChange}
-        />Cherry tomatoes
+        />Cherry tomatoes<br />
         <input
           type="checkbox"
           name="vehicle"
           value="0.5"
           onChange={this.handleInputChange}
-        />Chicken
+        />Chicken<br />
       </div>
     );
   }

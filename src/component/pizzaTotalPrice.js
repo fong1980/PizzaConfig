@@ -1,24 +1,26 @@
-import React, { PureComponent, Component } from "react";
+import React, { PureComponent } from "react";
 import { connect } from "react-redux";
-import { addTopping } from "../actions/pickAction";
 
 class pizzaTotalprice extends PureComponent {
-  componentDidMount() {
-    console.log("GrandChild did mount.");
-    //console.log(this.prop.waarde, "teddst");
-    //console.log(store.getState.addBasereducer, "test");
-    console.log(this.props.state, "teddst");
-  }
-  calcTotal(input) {
+  calcTotal() {
+    const tekst = "test";
     return {
-      input
+      tekst
     };
   }
   render() {
     return (
       <form>
         <label>
-          <strong>total price:</strong>
+          <p />
+          <p />
+          <strong>
+            total price:{" "}
+            {(this.props.pizzaBase +
+              this.props.pizzaSauce +
+              this.props.pizzaTopping) *
+              this.props.pizzaDrone}
+          </strong>
         </label>
         <br />
       </form>
@@ -28,7 +30,10 @@ class pizzaTotalprice extends PureComponent {
 
 const mapStateToProps = state => {
   return {
-    state
+    pizzaBase: state.addBaseReducer,
+    pizzaSauce: state.addSauceReducer,
+    pizzaTopping: state.addToppingReducer,
+    pizzaDrone: state.addDroneReducer
   };
 };
 export default connect(mapStateToProps, {})(pizzaTotalprice);
