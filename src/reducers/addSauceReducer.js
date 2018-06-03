@@ -2,7 +2,7 @@
 
 export default (state = 0, action) => {
   switch (action.type) {
-    case "ADDTOPPING":
+    case "ADDSAUCE":
       return action.input;
     default:
       return state;
