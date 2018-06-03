@@ -1,4 +1,4 @@
-export default (state = 0, action) => {
+export default (state = 1, action) => {
   switch (action.type) {
     case "ADDDRONE":
       return action.input;

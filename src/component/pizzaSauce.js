@@ -27,14 +27,14 @@ class PizzaSauce extends PureComponent {
           <input
             name="choseSauce"
             type="radio"
-            value="0.5"
+            value="0"
             onChange={this.handleInputChange}
           />
           White sauce <br />
           <input
             name="choseSauce"
             type="radio"
-            value="0.5"
+            value="0"
             onChange={this.handleInputChange}
           />Red sauce<br />
           <input
