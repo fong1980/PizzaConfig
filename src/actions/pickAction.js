@@ -12,11 +12,11 @@ export const addSauce = input => {
   };
 };
 
-// export const addTopping = () => {
-//   return {
-//     type: "ADDTOPPING"
-//   };
-// };
+export const addTopping = () => {
+  return {
+    type: "ADDTOPPING"
+  };
+};
 
 // export const addDrone = () => {
 //   return {

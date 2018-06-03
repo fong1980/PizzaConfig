@@ -53,5 +53,7 @@ class PizzaBase extends PureComponent {
   }
 }
 
-const mapStateToProps = state => {};
+const mapStateToProps = state => {
+  return state;
+};
 export default connect(mapStateToProps, { addBase })(PizzaBase);
