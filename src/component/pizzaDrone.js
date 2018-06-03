@@ -1,58 +1,52 @@
-// import React, { PureComponent } from "react";
-// import { connect } from "react-redux";
-// import { addDrone } from "../actions/pickAction";
+import React, { PureComponent } from "react";
+import { connect } from "react-redux";
+import { addDrone } from "../actions/pickAction";
 
-// class PizzaBase extends PureComponent {
-//   constructor(props) {
-//     super(props);
-//     this.state = {};
+class PizzaDrone extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isGoing: false
+    };
 
-//     this.handleInputChange = this.handleInputChange.bind(this);
-//   }
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
 
-//   handleInputChange(event) {
-//     //this.props.addBase(Number(event.target.value));
-//     // const target = event.target;
-//     // const name = target.name;
-//   }
+  handleInputChange(event) {
+    let discount = 0;
 
-//   render() {
-//     return (
-//       <form>
-//         <label>
-//           <p> Chose Base </p>
-//           <input
-//             name="choseBase"
-//             type="radio"
-//             value="8.99"
-//             onChange={this.handleInputChange}
-//           />25cm NY Style € 8,99
-//           <input
-//             name="choseBase"
-//             type="radio"
-//             value="11.49"
-//             onChange={this.handleInputChange}
-//           />30cm NY Style € 11,49
-//           <input
-//             name="choseBase"
-//             type="radio"
-//             value="13.49"
-//             onChange={this.handleInputChange}
-//           />35cm NY Style € 13,49
-//           <input
-//             name="choseBase"
-//             type="radio"
-//             value="6.45"
-//             onChange={this.handleInputChange}
-//           />20cm NY Style € 6,45
-//         </label>
-//         <br />
-//       </form>
-//     );
-//   }
-// }
+    if (event.target.checked) {
+      discount = 0.9;
+    } else {
+      discount = 1;
+    }
 
-// const mapStateToProps = state => {
-//   return state;
-// };
-// export default connect(mapStateToProps, { addBase })(PizzaBase);
+    //const value = target.type === "checkbox" ? target.checked : target.value;
+    this.props.addDrone(Number(discount));
+    // const target = event.target;
+    // const name = target.name;
+  }
+
+  render() {
+    return (
+      <form>
+        <label>
+          <input
+            name="choseBase"
+            type="checkbox"
+            value="8.99"
+            checked={this.state.inGoing}
+            onChange={this.handleInputChange}
+          />
+          <strong> For extra quick delivery by drone!.</strong>
+        </label>
+        <br />
+      </form>
+    );
+  }
+}
+
+const mapStateToProps = state => {
+  return state;
+};
+export default connect(mapStateToProps, { addDrone })(PizzaDrone);

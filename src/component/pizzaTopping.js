@@ -19,7 +19,7 @@ class PizzaTopping extends PureComponent {
   render() {
     return (
       <div className="Square">
-        <p> Chose Topping </p>
+        <p> Chose max 3 topping </p>
         <input
           type="checkbox"
           name="vehicle"

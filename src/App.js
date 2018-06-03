@@ -4,6 +4,8 @@ import React, { Component } from "react";
 import PizzaBase from "./component/pizzaBase";
 import PizzaSauce from "./component/pizzaSauce";
 import PizzaTopping from "./component/pizzaTopping";
+import PizzaDrone from "./component/pizzaDrone";
+import PizzaTotalPrice from "./component/pizzaTotalPrice";
 
 class App extends Component {
   render() {
@@ -15,6 +17,8 @@ class App extends Component {
         <PizzaBase />
         <PizzaSauce />
         <PizzaTopping />
+        <PizzaDrone />
+        <PizzaTotalPrice />
       </div>
     );
   }
